@@ -1,5 +1,5 @@
 
-import { Button } from "@/components/ui/button";
+import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -30,13 +30,17 @@ const Hero = () => {
           Um curso direto ao ponto, com tudo o que você precisa pra vender online por um preço que cabe no seu bolso.
         </p>
 
-        {/* CTA Button */}
+        {/* Red Neon Arrow pointing down */}
         <div className="flex justify-center">
-          <a href="https://kiwify.com" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-gradient-to-r from-emerald-500 to-purple-600 hover:from-emerald-600 hover:to-purple-700 text-white font-bold text-xl px-12 py-6 rounded-full shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:shadow-[0_0_50px_rgba(16,185,129,0.7)] transition-all duration-300 transform hover:scale-105">
-              QUERO ACESSAR O CURSO
-            </Button>
-          </a>
+          <div className="animate-bounce">
+            <ArrowDown 
+              size={60} 
+              className="text-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.8)] hover:drop-shadow-[0_0_30px_rgba(239,68,68,1)] transition-all duration-300 cursor-pointer"
+              style={{
+                filter: 'drop-shadow(0 0 10px #ef4444) drop-shadow(0 0 20px #ef4444) drop-shadow(0 0 30px #ef4444)'
+              }}
+            />
+          </div>
         </div>
 
         {/* Floating elements */}

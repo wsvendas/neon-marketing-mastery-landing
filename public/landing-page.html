@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,6 +11,7 @@
                 extend: {
                     animation: {
                         'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce': 'bounce 1s infinite',
                     }
                 }
             }
@@ -22,6 +22,14 @@
         body { font-family: 'Inter', sans-serif; }
         .neon-glow { text-shadow: 0 0 20px rgba(16, 185, 129, 0.8); }
         .grid-bg { background-image: linear-gradient(rgba(0,255,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,0,0.1) 1px, transparent 1px); background-size: 50px 50px; }
+        .neon-red-arrow {
+            color: #ef4444;
+            filter: drop-shadow(0 0 10px #ef4444) drop-shadow(0 0 20px #ef4444) drop-shadow(0 0 30px #ef4444);
+            transition: all 0.3s ease;
+        }
+        .neon-red-arrow:hover {
+            filter: drop-shadow(0 0 15px #ef4444) drop-shadow(0 0 25px #ef4444) drop-shadow(0 0 35px #ef4444);
+        }
     </style>
 </head>
 <body class="bg-black text-white overflow-x-hidden">
@@ -47,12 +55,13 @@
                 Um curso direto ao ponto, com tudo o que você precisa pra vender online por um preço que cabe no seu bolso.
             </p>
 
+            <!-- Red Neon Arrow pointing down -->
             <div class="flex justify-center">
-                <a href="https://kiwify.com" target="_blank" rel="noopener noreferrer">
-                    <button class="bg-gradient-to-r from-emerald-500 to-purple-600 hover:from-emerald-600 hover:to-purple-700 text-white font-bold text-xl px-12 py-6 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                        QUERO ACESSAR O CURSO
-                    </button>
-                </a>
+                <div class="animate-bounce cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="neon-red-arrow">
+                        <path d="m6 9 6 6 6-6"/>
+                    </svg>
+                </div>
             </div>
 
             <!-- Floating elements -->
